@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
 import './App.css';
 import Unit from './Unit';
+import units from '../api/units'
 
 class App extends Component {
   render() {
-    let unit = {type:'test'};
-    return (
-      <Unit unit={unit} />
+ let test = [];
+ Object.keys(units).forEach(function(key){
+      test.push(<Unit unit={units[key]} />);
+   });
+   return (
+     <div>
+        {test}
+     </div>
     );
   }
 }
