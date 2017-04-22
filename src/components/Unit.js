@@ -4,7 +4,10 @@ import './Unit.css';
 class Unit extends Component {
   render() {
     return (
-        <span>Unit </span>
+      <div class='unit'>
+        <span>Unit</span>
+        <span>{this.props.unit.type}</span>
+      </div>
     );
   }
 }
