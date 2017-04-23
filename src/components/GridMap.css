@@ -12,6 +12,10 @@
   background-color: red;
 }
 
+.red:hover {
+  background-color: green;
+}
+
 .hex {
   position: relative;
   visibility:hidden;
