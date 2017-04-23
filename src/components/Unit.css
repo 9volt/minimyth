@@ -1,0 +1,25 @@
+.unit {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template: 1fr 5fr 1fr / 1fr 5fr 1fr;
+  grid-template-areas:
+    "blood name   crown"
+    "..... pic    ....."
+    "..... status .....";
+}
+
+.name {
+  grid-area: name;
+  text-align: center;
+}
+
+.status_row {
+  grid-area: status;
+  display: flex;
+  justify-content: space-around;
+}
+
+.unit_image {
+  grid-area: pic;
+}

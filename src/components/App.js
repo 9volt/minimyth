@@ -1,17 +1,21 @@
 import React, { Component } from 'react';
 import './App.css';
 import Unit from './Unit';
-import units from '../api/units'
+import units from '../api/units';
+import GridMap from './GridMap';
 
 class App extends Component {
   render() {
- let test = [];
- Object.keys(units).forEach(function(key){
-      test.push(<Unit unit={units[key]} />);
+   let unit_test = [];
+   Object.keys(units).forEach(function(key){
+      unit_test.push(<Unit key={key} unit={units[key]} />);
    });
    return (
      <div>
-        {test}
+       <GridMap />
+       <div className="grid_test">
+          {unit_test}
+       </div>
      </div>
     );
   }
